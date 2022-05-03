@@ -13,15 +13,24 @@ services:
       - .env
     depends_on:
       - db
+    networks:
+      - local
+      - aass_network
 
   db:
     image: postgres:13.0-alpine
     volumes:
       - database-data:/var/lib/postgresql/data/
-    ports:
-      - "5432:5432"
     env_file:
       - .env
+    networks:
+      - local
 
 volumes:
   database-data:
+
+networks:
+  aass_network:
+    name: aass_network
+  local:
+    driver: bridge
