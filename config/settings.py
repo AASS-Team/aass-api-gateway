@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "labs",
     "grants",
     "tools",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -134,6 +135,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
 ]
+
+# Auth
+AUTH_USER_MODEL = "users.User"
+AUTHENTICATION_BACKENDS = ["users.backends.AuthenticationBackend"]
+LOGIN_URL = "/login"
 
 # API Urls
 API_ANALYSES_URL = require_env("API_ANALYSES_URL")

@@ -1,0 +1,33 @@
+[39m[1mLoading .env environment variables...[39m[22m
+[
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "administrátor",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "laborant",
+        "permissions": [
+            [
+                "can_vote",
+                "users",
+                "user"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "používateľ",
+        "permissions": []
+    }
+}
+]

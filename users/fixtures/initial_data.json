@@ -1,0 +1,483 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "codename": "view_sample",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "codename": "add_sample",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "codename": "change_sample",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "codename": "delete_sample",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "codename": "view_analysis",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "codename": "add_analysis",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "codename": "change_analysis",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "codename": "delete_analysis",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "codename": "view_grant",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "codename": "add_grant",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "codename": "change_grant",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "codename": "delete_grant",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "codename": "view_tool",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "codename": "add_tool",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "codename": "change_tool",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "codename": "delete_tool",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "codename": "view_lab",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "codename": "add_lab",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "codename": "change_lab",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "codename": "delete_lab",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "administrátor",
+      "permissions": [
+        [
+          "view_sample",
+          "users",
+          "user"
+        ],
+        [
+          "add_sample",
+          "users",
+          "user"
+        ],
+        [
+          "change_sample",
+          "users",
+          "user"
+        ],
+        [
+          "delete_sample",
+          "users",
+          "user"
+        ],
+        [
+          "view_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "add_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "change_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "delete_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "view_grant",
+          "users",
+          "user"
+        ],
+        [
+          "add_grant",
+          "users",
+          "user"
+        ],
+        [
+          "change_grant",
+          "users",
+          "user"
+        ],
+        [
+          "delete_grant",
+          "users",
+          "user"
+        ],
+        [
+          "view_user",
+          "users",
+          "user"
+        ],
+        [
+          "add_user",
+          "users",
+          "user"
+        ],
+        [
+          "change_user",
+          "users",
+          "user"
+        ],
+        [
+          "delete_user",
+          "users",
+          "user"
+        ],
+        [
+          "view_lab",
+          "users",
+          "user"
+        ],
+        [
+          "add_lab",
+          "users",
+          "user"
+        ],
+        [
+          "change_lab",
+          "users",
+          "user"
+        ],
+        [
+          "delete_lab",
+          "users",
+          "user"
+        ],
+        [
+          "add_tool",
+          "users",
+          "user"
+        ],
+        [
+          "change_tool",
+          "users",
+          "user"
+        ],
+        [
+          "delete_tool",
+          "users",
+          "user"
+        ],
+        [
+          "view_tool",
+          "users",
+          "user"
+        ]
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "laborant",
+      "permissions": [
+        [
+          "view_sample",
+          "users",
+          "user"
+        ],
+        [
+          "add_sample",
+          "users",
+          "user"
+        ],
+        [
+          "change_sample",
+          "users",
+          "user"
+        ],
+        [
+          "delete_sample",
+          "users",
+          "user"
+        ],
+        [
+          "view_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "add_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "change_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "delete_analysis",
+          "users",
+          "user"
+        ]
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+      "name": "používateľ",
+      "permissions": [
+        [
+          "view_analysis",
+          "users",
+          "user"
+        ],
+        [
+          "view_sample",
+          "users",
+          "user"
+        ]
+      ]
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "953a54c8-3320-43a7-8eb8-c9381b635af8",
+    "fields": {
+      "password": "pbkdf2_sha256$320000$vhrjm4fswn5hWKf8RwZBIz$PlCD9tvyl/YkEstMbgLLOln4hQVi63HD+f3V+2DKBPE=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "Admin",
+      "last_name": "Administratívny",
+      "email": "admin@test.sk",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "f7d9caf4-9101-4fe5-859a-f286272640a3",
+    "fields": {
+      "password": "pbkdf2_sha256$320000$yHiD8loC9hSnlpVFDDpUCv$9EPrtY4zY5Op5REm5UbryrySE2cNx1gcE30Om6/ME8E=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Laborant",
+      "last_name": "Laboratórny",
+      "email": "laborant@test.sk",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "4386280d-00d4-4677-a2c5-a68c66ec6825",
+    "fields": {
+      "password": "pbkdf2_sha256$320000$5BA8Mc38ryTaDklFyTJuDz$SDLzFzBc9z+KK9Ks3enclbPvvPHHJ6prGiyMbVaPCjo=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Používateľ",
+      "last_name": "Použitý",
+      "email": "user@test.sk",
+      "groups": [
+        3
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "d845c72a-2108-4b76-9dc0-2c3f936873ad",
+    "fields": {
+      "password": "pbkdf2_sha256$320000$5BA8Mc38ryTaDklFyTJuDz$SDLzFzBc9z+KK9Ks3enclbPvvPHHJ6prGiyMbVaPCjo=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Používateľka",
+      "last_name": "Iná",
+      "email": "user2@test.sk",
+      "groups": [
+        3
+      ],
+      "user_permissions": []
+    }
+  }
+]

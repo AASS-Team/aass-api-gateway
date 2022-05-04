@@ -17,6 +17,7 @@ from django.urls import path, include
 from labs import views as lab_views
 from grants import views as grant_views
 from tools import views as tool_views
+from users import views as user_views
 
 urlpatterns = [
     path(
@@ -47,6 +48,15 @@ urlpatterns = [
                         [
                             path("", tool_views.ToolsList.as_view()),
                             path("<uuid:id>", tool_views.ToolDetail.as_view()),
+                        ]
+                    ),
+                ),
+                path(
+                    "users/",
+                    include(
+                        [
+                            path("", user_views.UsersList.as_view()),
+                            path("<uuid:id>", user_views.UserDetail.as_view()),
                         ]
                     ),
                 ),
