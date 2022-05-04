@@ -14,12 +14,12 @@ class LabsList(APIView):
 
         if not response.ok:
             return Response(
-                {"error": response.reason, "success": False},
+                {"errors": response.json(), "success": False},
                 status=response.status_code,
             )
 
         return Response(
-            {"data": response.json(), "success": True}, status=response.status_code
+            data={"data": response.json(), "success": True}, status=response.status_code
         )
 
     def post(self, request, format=None):
@@ -33,12 +33,12 @@ class LabsList(APIView):
 
         if not response.ok:
             return Response(
-                {"error": response.reason, "success": False},
+                data={"errors": response.json(), "success": False},
                 status=response.status_code,
             )
 
         return Response(
-            {"data": response.json(), "success": True}, status=response.status_code
+            data={"data": response.json(), "success": True}, status=response.status_code
         )
 
 
@@ -51,12 +51,12 @@ class LabDetail(APIView):
 
         if not response.ok:
             return Response(
-                {"error": response.reason, "success": False},
+                data={"errors": response.json(), "success": False},
                 status=response.status_code,
             )
 
         return Response(
-            {"data": response.json(), "success": True}, status=response.status_code
+            data={"data": response.json(), "success": True}, status=response.status_code
         )
 
     def put(self, request, id, format=None):
@@ -73,12 +73,12 @@ class LabDetail(APIView):
 
         if not response.ok:
             return Response(
-                {"error": response.reason, "success": False},
+                data={"errors": response.json(), "success": False},
                 status=response.status_code,
             )
 
         return Response(
-            {"data": response.json(), "success": True}, status=response.status_code
+            data={"data": response.json(), "success": True}, status=response.status_code
         )
 
     def delete(self, request, id, format=None):
@@ -89,8 +89,8 @@ class LabDetail(APIView):
 
         if not response.ok:
             return Response(
-                {"error": response.reason, "success": False},
+                data={"errors": response.json(), "success": False},
                 status=response.status_code,
             )
 
-        return Response({"success": True}, status=response.status_code)
+        return Response(data={"success": True}, status=response.status_code)
