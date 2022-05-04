@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.urls import path, include
 from labs import views as lab_views
+from grants import views as grant_views
 
 urlpatterns = [
     path(
@@ -29,7 +30,16 @@ urlpatterns = [
                             path("<uuid:id>", lab_views.LabDetail.as_view()),
                         ]
                     ),
-                )
+                ),
+                path(
+                    "grants/",
+                    include(
+                        [
+                            path("", grant_views.GrantsList.as_view()),
+                            path("<uuid:id>", grant_views.GrantDetail.as_view()),
+                        ]
+                    ),
+                ),
             ]
         ),
     )
