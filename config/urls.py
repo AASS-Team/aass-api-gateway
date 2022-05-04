@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path, include
 from labs import views as lab_views
 from grants import views as grant_views
+from tools import views as tool_views
 
 urlpatterns = [
     path(
@@ -37,6 +38,15 @@ urlpatterns = [
                         [
                             path("", grant_views.GrantsList.as_view()),
                             path("<uuid:id>", grant_views.GrantDetail.as_view()),
+                        ]
+                    ),
+                ),
+                path(
+                    "tools/",
+                    include(
+                        [
+                            path("", tool_views.ToolsList.as_view()),
+                            path("<uuid:id>", tool_views.ToolDetail.as_view()),
                         ]
                     ),
                 ),
