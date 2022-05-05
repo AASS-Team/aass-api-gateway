@@ -60,6 +60,7 @@ urlpatterns = [
                         ]
                     ),
                 ),
+                path("groups/", user_views.GroupsList.as_view()),
             ]
         ),
     )

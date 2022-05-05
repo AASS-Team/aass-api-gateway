@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+from django.contrib.auth.models import Group
 from .models import User
 from . import serializers
 
@@ -89,3 +90,18 @@ class UserDetail(APIView):
             )
 
         return Response(data={"success": True}, status=status.HTTP_204_NO_CONTENT)
+
+
+class GroupsList(APIView):
+    serializer_class = serializers.GroupSerializer
+
+    def get(self, request, format=None):
+        """
+        List instances
+        """
+        groups = Group.objects.all()
+        serializer = self.serializer_class(groups, many=True)
+
+        return Response(
+            data={"data": serializer.data, "success": True}, status=status.HTTP_200_OK
+        )
