@@ -1,3 +1,5 @@
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import permission_required
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import requests
@@ -8,6 +10,7 @@ from users.serializers import UserSerializer
 
 
 class AnalysesList(APIView):
+    @method_decorator(permission_required("users.read_analysis", raise_exception=True))
     def get(self, request, format=None):
         """
         List instances
@@ -52,6 +55,9 @@ class AnalysesList(APIView):
             data={"data": analyses, "success": True}, status=response.status_code
         )
 
+    @method_decorator(
+        permission_required("users.create_analysis", raise_exception=True)
+    )
     def post(self, request, format=None):
         """
         Create new instance
@@ -78,6 +84,7 @@ class AnalysesList(APIView):
 
 
 class AnalysisDetail(APIView):
+    @method_decorator(permission_required("users.read_analysis", raise_exception=True))
     def get(self, request, id, format=None):
         """
         Get single instance
@@ -144,6 +151,9 @@ class AnalysisDetail(APIView):
             status=response.status_code,
         )
 
+    @method_decorator(
+        permission_required("users.update_analysis", raise_exception=True)
+    )
     def put(self, request, id, format=None):
         """
         Update instance
@@ -169,6 +179,9 @@ class AnalysisDetail(APIView):
             data={"data": response.json(), "success": True}, status=response.status_code
         )
 
+    @method_decorator(
+        permission_required("users.delete_analysis", raise_exception=True)
+    )
     def delete(self, request, id, format=None):
         """
         Delete instance
@@ -190,6 +203,9 @@ class AnalysisStart(APIView):
     Analysis start
     """
 
+    @method_decorator(
+        permission_required("users.update_analysis", raise_exception=True)
+    )
     def post(self, request, id, format=None):
         """
         Update instance
@@ -214,6 +230,9 @@ class AnalysisFinish(APIView):
     Analysis finish
     """
 
+    @method_decorator(
+        permission_required("users.update_analysis", raise_exception=True)
+    )
     def post(self, request, id, format=None):
         """
         Update instance

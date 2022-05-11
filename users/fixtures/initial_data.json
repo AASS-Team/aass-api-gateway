@@ -3,7 +3,7 @@
     "model": "auth.permission",
     "pk": 25,
     "fields": {
-      "codename": "view_sample",
+      "codename": "read_sample",
       "content_type": [
         "users",
         "user"
@@ -14,7 +14,7 @@
     "model": "auth.permission",
     "pk": 26,
     "fields": {
-      "codename": "add_sample",
+      "codename": "create_sample",
       "content_type": [
         "users",
         "user"
@@ -25,7 +25,7 @@
     "model": "auth.permission",
     "pk": 27,
     "fields": {
-      "codename": "change_sample",
+      "codename": "update_sample",
       "content_type": [
         "users",
         "user"
@@ -47,7 +47,7 @@
     "model": "auth.permission",
     "pk": 29,
     "fields": {
-      "codename": "view_analysis",
+      "codename": "read_analysis",
       "content_type": [
         "users",
         "user"
@@ -58,7 +58,7 @@
     "model": "auth.permission",
     "pk": 30,
     "fields": {
-      "codename": "add_analysis",
+      "codename": "create_analysis",
       "content_type": [
         "users",
         "user"
@@ -69,7 +69,7 @@
     "model": "auth.permission",
     "pk": 31,
     "fields": {
-      "codename": "change_analysis",
+      "codename": "update_analysis",
       "content_type": [
         "users",
         "user"
@@ -91,7 +91,7 @@
     "model": "auth.permission",
     "pk": 33,
     "fields": {
-      "codename": "view_grant",
+      "codename": "read_grant",
       "content_type": [
         "users",
         "user"
@@ -102,7 +102,7 @@
     "model": "auth.permission",
     "pk": 34,
     "fields": {
-      "codename": "add_grant",
+      "codename": "create_grant",
       "content_type": [
         "users",
         "user"
@@ -113,7 +113,7 @@
     "model": "auth.permission",
     "pk": 35,
     "fields": {
-      "codename": "change_grant",
+      "codename": "update_grant",
       "content_type": [
         "users",
         "user"
@@ -135,7 +135,7 @@
     "model": "auth.permission",
     "pk": 37,
     "fields": {
-      "codename": "view_tool",
+      "codename": "read_tool",
       "content_type": [
         "users",
         "user"
@@ -146,7 +146,7 @@
     "model": "auth.permission",
     "pk": 38,
     "fields": {
-      "codename": "add_tool",
+      "codename": "create_tool",
       "content_type": [
         "users",
         "user"
@@ -157,7 +157,7 @@
     "model": "auth.permission",
     "pk": 39,
     "fields": {
-      "codename": "change_tool",
+      "codename": "update_tool",
       "content_type": [
         "users",
         "user"
@@ -179,7 +179,7 @@
     "model": "auth.permission",
     "pk": 41,
     "fields": {
-      "codename": "view_lab",
+      "codename": "read_lab",
       "content_type": [
         "users",
         "user"
@@ -190,7 +190,7 @@
     "model": "auth.permission",
     "pk": 42,
     "fields": {
-      "codename": "add_lab",
+      "codename": "create_lab",
       "content_type": [
         "users",
         "user"
@@ -201,7 +201,7 @@
     "model": "auth.permission",
     "pk": 43,
     "fields": {
-      "codename": "change_lab",
+      "codename": "update_lab",
       "content_type": [
         "users",
         "user"
@@ -220,23 +220,78 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "codename": "read_group",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "codename": "read_permission",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "codename": "read_user",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "codename": "create_user",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "codename": "update_user",
+      "content_type": [
+        "users",
+        "user"
+      ]
+    }
+  },
+  {
     "model": "auth.group",
     "pk": 1,
     "fields": {
       "name": "administrátor",
       "permissions": [
         [
-          "view_sample",
+          "read_sample",
           "users",
           "user"
         ],
         [
-          "add_sample",
+          "create_sample",
           "users",
           "user"
         ],
         [
-          "change_sample",
+          "update_sample",
           "users",
           "user"
         ],
@@ -246,17 +301,17 @@
           "user"
         ],
         [
-          "view_analysis",
+          "read_analysis",
           "users",
           "user"
         ],
         [
-          "add_analysis",
+          "create_analysis",
           "users",
           "user"
         ],
         [
-          "change_analysis",
+          "update_analysis",
           "users",
           "user"
         ],
@@ -266,17 +321,17 @@
           "user"
         ],
         [
-          "view_grant",
+          "read_grant",
           "users",
           "user"
         ],
         [
-          "add_grant",
+          "create_grant",
           "users",
           "user"
         ],
         [
-          "change_grant",
+          "update_grant",
           "users",
           "user"
         ],
@@ -286,17 +341,17 @@
           "user"
         ],
         [
-          "view_user",
+          "read_user",
           "users",
           "user"
         ],
         [
-          "add_user",
+          "create_user",
           "users",
           "user"
         ],
         [
-          "change_user",
+          "update_user",
           "users",
           "user"
         ],
@@ -306,17 +361,17 @@
           "user"
         ],
         [
-          "view_lab",
+          "read_lab",
           "users",
           "user"
         ],
         [
-          "add_lab",
+          "create_lab",
           "users",
           "user"
         ],
         [
-          "change_lab",
+          "update_lab",
           "users",
           "user"
         ],
@@ -326,12 +381,12 @@
           "user"
         ],
         [
-          "add_tool",
+          "create_tool",
           "users",
           "user"
         ],
         [
-          "change_tool",
+          "update_tool",
           "users",
           "user"
         ],
@@ -341,7 +396,7 @@
           "user"
         ],
         [
-          "view_tool",
+          "read_tool",
           "users",
           "user"
         ]
@@ -355,17 +410,17 @@
       "name": "laborant",
       "permissions": [
         [
-          "view_sample",
+          "read_sample",
           "users",
           "user"
         ],
         [
-          "add_sample",
+          "create_sample",
           "users",
           "user"
         ],
         [
-          "change_sample",
+          "update_sample",
           "users",
           "user"
         ],
@@ -375,17 +430,17 @@
           "user"
         ],
         [
-          "view_analysis",
+          "read_analysis",
           "users",
           "user"
         ],
         [
-          "add_analysis",
+          "create_analysis",
           "users",
           "user"
         ],
         [
-          "change_analysis",
+          "update_analysis",
           "users",
           "user"
         ],
@@ -404,12 +459,12 @@
       "name": "používateľ",
       "permissions": [
         [
-          "view_analysis",
+          "read_analysis",
           "users",
           "user"
         ],
         [
-          "view_sample",
+          "read_sample",
           "users",
           "user"
         ]
