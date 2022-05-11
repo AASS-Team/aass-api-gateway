@@ -1,3 +1,5 @@
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import permission_required
 from django.db.models import Q
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -9,6 +11,7 @@ from users.serializers import UserSerializer
 
 
 class SamplesList(APIView):
+    @method_decorator(permission_required("users.read_sample", raise_exception=True))
     def get(self, request, format=None):
         """
         List instances
@@ -43,6 +46,7 @@ class SamplesList(APIView):
             data={"data": samples, "success": True}, status=response.status_code
         )
 
+    @method_decorator(permission_required("users.create_sample", raise_exception=True))
     def post(self, request, format=None):
         """
         Create new instance
@@ -70,6 +74,7 @@ class SamplesList(APIView):
 
 
 class SampleDetail(APIView):
+    @method_decorator(permission_required("users.read_sample", raise_exception=True))
     def get(self, request, id, format=None):
         """
         Get single instance
@@ -104,6 +109,7 @@ class SampleDetail(APIView):
             status=response.status_code,
         )
 
+    @method_decorator(permission_required("users.update_sample", raise_exception=True))
     def put(self, request, id, format=None):
         """
         Update instance
@@ -129,6 +135,7 @@ class SampleDetail(APIView):
             data={"data": response.json(), "success": True}, status=response.status_code
         )
 
+    @method_decorator(permission_required("users.delete_sample", raise_exception=True))
     def delete(self, request, id, format=None):
         """
         Delete instance

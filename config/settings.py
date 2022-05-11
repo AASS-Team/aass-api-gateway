@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     "grants",
     "tools",
     "users",
+    "rest_framework",
+    "rest_framework.authtoken",
 ]
 
 MIDDLEWARE = [
@@ -140,6 +142,14 @@ CORS_ALLOWED_ORIGINS = [
 AUTH_USER_MODEL = "users.User"
 AUTHENTICATION_BACKENDS = ["users.backends.AuthenticationBackend"]
 LOGIN_URL = "/login"
+
+# Rest Framework
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.TokenAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
 
 # API Urls
 API_ANALYSES_URL = require_env("API_ANALYSES_URL")
