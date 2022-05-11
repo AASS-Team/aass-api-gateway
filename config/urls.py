@@ -19,6 +19,7 @@ from grants import views as grant_views
 from tools import views as tool_views
 from users import views as user_views
 from samples import views as sample_views
+from analyses import views as analysis_views
 
 urlpatterns = [
     path(
@@ -68,6 +69,23 @@ urlpatterns = [
                         [
                             path("", sample_views.SamplesList.as_view()),
                             path("<uuid:id>", sample_views.SampleDetail.as_view()),
+                        ]
+                    ),
+                ),
+                path(
+                    "analyses/",
+                    include(
+                        [
+                            path("", analysis_views.AnalysesList.as_view()),
+                            path("<uuid:id>", analysis_views.AnalysisDetail.as_view()),
+                            path(
+                                "<uuid:id>/start",
+                                analysis_views.AnalysisStart.as_view(),
+                            ),
+                            path(
+                                "<uuid:id>/finish",
+                                analysis_views.AnalysisFinish.as_view(),
+                            ),
                         ]
                     ),
                 ),
